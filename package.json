@@ -10,7 +10,7 @@
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "babel src -d lib -D",
-    "prepublish": "npm run -s build",
+    "prepublish": "npm run snyk-protect; npm run -s build",
     "dev": "babel-node src",
     "lint": "eslint src tests",
     "pretest": "npm run -s build && rimraf ./tests/output",
@@ -23,7 +23,8 @@
     "test:simple": "babel-node src build --cwd examples/simple && babel-node src serve --port 3000 --cwd examples/simple",
     "test:empty": "babel-node src build --cwd examples/empty && babel-node src serve --port 3000 --cwd examples/empty",
     "test:watch": "babel-node src watch --cwd examples/root --port 3000",
-    "test:deploy": "npm run test:build && cp examples/root/build/index.html examples/root/build/200.html && surge -d cli-demo.preactjs.com examples/root/build"
+    "test:deploy": "npm run test:build && cp examples/root/build/index.html examples/root/build/200.html && surge -d cli-demo.preactjs.com examples/root/build",
+    "snyk-protect": "snyk protect"
   },
   "engines": {
     "node": ">=6"
@@ -155,6 +156,8 @@
     "webpack-dev-server": "^2.4.5",
     "webpack-plugin-replace": "^1.1.1",
     "which": "^1.2.14",
-    "yargs": "^8.0.1"
-  }
+    "yargs": "^8.0.1",
+    "snyk": "^1.192.0"
+  },
+  "snyk": true
 }
