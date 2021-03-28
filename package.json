@@ -151,10 +151,10 @@
     "tmp": "0.0.31",
     "unfetch": "^3.0.0",
     "url-loader": "^0.5.8",
-    "webpack": "^2.3.3",
+    "webpack": "^4.0.0",
     "webpack-dev-server": "^2.4.5",
     "webpack-plugin-replace": "^1.1.1",
     "which": "^1.2.14",
-    "yargs": "^8.0.1"
+    "yargs": "^10.0.0"
   }
 }
