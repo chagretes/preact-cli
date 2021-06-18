@@ -100,7 +100,7 @@
     "@webpack-blocks/css-modules": "^0.4.0",
     "@webpack-blocks/dev-server2": "^0.4.0",
     "@webpack-blocks/extract-text2": "^0.4.0",
-    "@webpack-blocks/postcss": "^0.4.3",
+    "@webpack-blocks/postcss": "^2.0.0",
     "@webpack-blocks/webpack2": "^0.4.0",
     "autoprefixer": "^7.1.0",
     "babel-loader": "^7.0.0",
